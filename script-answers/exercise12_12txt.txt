@@ -1,0 +1,13 @@
+root@1c1aad52e280:/usr# ls
+bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
+root@1c1aad52e280:/usr# cd src
+root@1c1aad52e280:/usr/src# ls
+root@1c1aad52e280:/usr/src# mkdir app
+root@1c1aad52e280:/usr/src# ls
+app
+root@1c1aad52e280:/usr/src# cd app
+root@1c1aad52e280:/usr/src/app# touch index.js
+root@1c1aad52e280:/usr/src/app# ls
+index.js
+root@1c1aad52e280:/usr/src/app# exit
+exit
