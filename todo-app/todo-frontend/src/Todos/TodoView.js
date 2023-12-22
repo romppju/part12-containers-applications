@@ -6,7 +6,7 @@ import Form from './Form'
 
 const TodoView = () => {
   const [todos, setTodos] = useState([])
-
+  console.log(process.env.REACT_APP_BACKEND_URL)
   const refreshTodos = async () => {
     const { data } = await axios.get('/todos')
     setTodos(data)
@@ -29,14 +29,14 @@ const TodoView = () => {
   const completeTodo = async (todo) => {
     await axios.put(`/todos/${todo._id}`, {
       text: todo.text,
-      done: true
+      done: true,
     })
     refreshTodos()
   }
 
   return (
     <>
-      <h1>Todos</h1>
+      <h1>Todoss</h1>
       <Form createTodo={createTodo} />
       <List todos={todos} deleteTodo={deleteTodo} completeTodo={completeTodo} />
     </>

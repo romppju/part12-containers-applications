@@ -1,0 +1,19 @@
+docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS          PORTS                     NAMES
+1a5b5bc943c5   mongo     "docker-entrypoint.s…"   About an hour ago   Up 24 seconds   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+3aae973b6e9f   redis     "docker-entrypoint.s…"   About an hour ago   Up 24 seconds   0.0.0.0:6379->6379/tcp    todo-backend-redis-1
+
+docker exec -it todo-backend-redis-1 redis-cli
+127.0.0.1:6379> KEYS todoCount
+1) "todoCount"
+127.0.0.1:6379> GET todoCount
+"1"
+127.0.0.1:6379> SET todoCount 9001
+OK
+127.0.0.1:6379> GET todoCount
+"9001"
+127.0.0.1:6379> GET todoCount
+"9002"
+127.0.0.1:6379> DEL todoCount
+(integer) 1
+127.0.0.1:6379>

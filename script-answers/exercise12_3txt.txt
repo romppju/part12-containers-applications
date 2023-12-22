@@ -1,0 +1,4 @@
+root@1c1aad52e280:~# nano /usr/src/app/index.js
+console.log('Hello World')
+CTRL+o
+CTRL+x

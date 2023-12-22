@@ -1,3 +1,7 @@
+mongo_data/
+redis_data/
+.env
+
 # Logs
 logs
 *.log
